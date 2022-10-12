@@ -1,0 +1,51 @@
+$celeste: #bfd8ff;
+$azul: #007dfe; 
+$gris: #ebf1ff;
+
+.bg {
+    background-color: $celeste;
+}
+
+.bg-gris {
+    background-color: $gris;
+}
+
+.bg-azul {
+    background-color: $azul;
+}
+
+.linea {
+    border-bottom: 1px dashed black;
+}
+
+*, a {
+    color: #000;
+}
+
+h1,p {
+    color: #000;
+}
+
+.login-container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-lib {
+    overflow: hidden;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position:50% 50%;
+
+    } 
+}
+
+.padding-hero {
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+}

@@ -1,0 +1,53 @@
+{% extends 'layout.html' %}
+
+{% block title %} Login {% endblock %}
+
+{% block content %}
+
+<div class="login-container bg-gris">
+  <div class="container w-75 bg shadow rounded">
+    <div class="row align-items-stretch">
+  
+      <div class="col d-none d-lg-block col-md-5 col-lg-5 col-xl-6 img-lib p-0">
+          <!-- imagen -->
+          <img src="../static/img/log.jpg" alt="biblioteca" loading="lazy">
+      </div>
+  
+      <div class="col py-5 px-5">
+          <div class="text-end">
+            <!-- logo aqui -->
+          </div>
+          <h2 class="fw-bold text-center py-3">
+            Inicia Sesión
+          </h2>
+  
+          <!-- login -->
+          <form action="/login" method="post">
+            <div class="mb-4">
+              <label for="username" class="form-label">Nombre de usuario</label>
+              <input name="username" type="text" class="form-control" id="username">
+            </div>
+            <div class="mb-4">
+              <label for="password" class="form-label">Contraseña</label>
+              <input name="password" type="password" class="form-control" id="password">
+            </div>
+            <div class="d-grid">
+              <button type="submit" class="btn btn-primary">Iniciar sesión</button>
+            </div>
+
+            <div class="linea my-4"></div>
+
+            <div class="text-center">
+              <span> No tienes cuenta? <a href="{{ url_for('register') }}"> Regístrate </a> </span>
+            </div>  
+          </form>
+          
+          {% if message %}
+            <p class="text-center text-danger fs-5 m-auto mt-5 bg-light p-2 fw-bold w-75" >{{message}}</p>
+          {% endif %}
+      </div>
+    </div>
+  </div>  
+</div>
+
+{% endblock %}
